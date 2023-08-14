@@ -1,0 +1,21 @@
+#topo {
+    background: rgb(19, 18, 18);
+    width: vw;
+    height: 75px;
+}
+
+body {
+    margin: 0;
+    background: rgb(202, 196, 184);
+}
+
+#logo {
+    height: 50px;
+    color: whitesmoke;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    text-align: center;
+    margin: 15px;
+    
+}

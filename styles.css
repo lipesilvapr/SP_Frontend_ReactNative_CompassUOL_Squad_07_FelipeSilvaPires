@@ -1,21 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&display=swap');
+
 #topo {
+    display: flex;
+    justify-content: space-between;
     background: rgb(19, 18, 18);
-    width: vw;
+    width: 100%;
     height: 75px;
+    position: sticky;
+    top: 0;
+    align-items: center;
 }
 
 body {
     margin: 0;
-    background: rgb(202, 196, 184);
+    background: rgb(212, 210, 206);
 }
 
-#logo {
-    height: 50px;
-    color: whitesmoke;
-    position: fixed;
+#gow{
+    height: 55px;
+    position: sticky;
     top: 0;
     z-index: 1;
     text-align: center;
-    margin: 15px;
+    margin: 10px;
+    margin-left: 25px;
     
+}
+
+#navi{
+    inset-inline-start: 0;
+}
+
+#navi ul{
+    color: whitesmoke;
+    display: flex;
+    margin-inline: 0;
+    justify-content: end;
+}
+
+#navi ul li{
+    margin-inline: .25rem;
+    margin-block: 0;
+    line-height: 1.5rem;
+    list-style: none;
+    padding: 5px;
+    margin: 0 1rem;
+    transition: transform .2s;
+    font-family: 'Raleway', sans-serif;
+}
+
+#navi ul li:hover{
+    cursor: pointer;
+    transform: scale(1.2);    
+}
+
+#inicio{
+    display: flex;
+    margin-top: 2rem;
+    padding: 0 2.5rem;
+    justify-content:space-between;   
+}
+
+.titulo{
+    font-family: 'Raleway', sans-serif;
+}
+
+.text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: large;
+    padding-top: 2rem;
+}
+
+#montain {
+    margin: 1rem 1rem;
+    width: 600px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.post{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding: 0 2.5rem;
+}
+
+.post p {
+    font-family: 'Cormorant Garamond', serif;
+    margin: 0 1.5rem;
+    padding: 0 5%; 
+    text-align: center;
+}
+
+.post ~{
+   j: center;
+}
+
+.post p{
+    margin: 0 1.5rem;
+    padding: 0 5%;
+    width: 15rem;
+    text-align: center;
+}
+
+
+#ruina{
+    margin: 1rem 1rem;
+    width: 300px;
+    box-shadow: 0px 15px 12px 0px rgba(0,0,0,0.6);
+}
+
+.linha{
+    margin-top: 1rem;
+    height: 1px;
+    width: 95%;
+    opacity: 65%;
+       
 }

@@ -1,2 +1,1 @@
-# SP_Frontend_ReactNative_CompassUOL_Squad_07_FelipeSilvaPires
 Challenge 01

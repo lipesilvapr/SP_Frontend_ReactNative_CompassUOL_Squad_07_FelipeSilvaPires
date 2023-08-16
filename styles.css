@@ -17,6 +17,16 @@ body {
     background: rgb(212, 210, 206);
 }
 
+@keyframes fadeIn{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes slideInLeft {
+    0% {transform: translateX(-100%)}
+    100%{transform: translateX(0)}
+}
+
 #gow{
     height: 55px;
     position: sticky;
@@ -48,28 +58,38 @@ body {
     margin: 0 1rem;
     transition: transform .2s;
     font-family: 'Raleway', sans-serif;
+    border-bottom: 1px solid rgb(19, 18, 18);
 }
 
 #navi ul li:hover{
     cursor: pointer;
-    transform: scale(1.2);    
+    transform: scale(1.2); 
+    border-bottom: 1px solid whitesmoke;   
 }
 
 #inicio{
+    animation: fadeIn 3s;
     display: flex;
-    margin-top: 2rem;
-    padding: 0 2.5rem;
-    justify-content:space-between;   
+    margin-top: 1rem;
+    justify-content:space-between; 
+      
+}
+
+#inicio img {
+    margin: 0 3rem;  
 }
 
 .titulo{
     font-family: 'Raleway', sans-serif;
+    padding: 0 3rem;
+    margin: 2rem 0;
 }
 
 .text {
     font-family: 'Cormorant Garamond', serif;
     font-size: large;
     padding-top: 2rem;
+    padding: 0 3rem;
 }
 
 #montain {
@@ -78,25 +98,36 @@ body {
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 
-.post{
+.posts{
+    animation: slideInLeft 3.5s;
     display: flex;
     justify-content: space-between;
     margin-top: 1rem;
-    padding: 0 2.5rem;
+    padding: 0 2.5rem;  
+       
 }
 
-.post p {
+.posts p {
     font-family: 'Cormorant Garamond', serif;
     margin: 0 1.5rem;
     padding: 0 5%; 
     text-align: center;
 }
 
-.post ~{
-   j: center;
+.posts div{
+   justify-content: center;
+   border-left: 1.5px solid rgb(19, 18, 18); 
+   transition: transform .2s;
+   padding: 0 1rem;
 }
 
-.post p{
+.posts div:hover{
+    transform: scale(1.15);
+    cursor: pointer;
+    border-left: 2px solid rgb(19, 18, 18); 
+}
+
+.posts p{
     margin: 0 1.5rem;
     padding: 0 5%;
     width: 15rem;
@@ -104,8 +135,9 @@ body {
 }
 
 
-#ruina{
+.posts img{
     margin: 1rem 1rem;
+    margin-top: 0;
     width: 300px;
     box-shadow: 0px 15px 12px 0px rgba(0,0,0,0.6);
 }
@@ -117,3 +149,4 @@ body {
     opacity: 65%;
        
 }
+

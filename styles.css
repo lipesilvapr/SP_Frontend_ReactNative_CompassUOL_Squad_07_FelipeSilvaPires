@@ -5,7 +5,7 @@ header{
     display: flex;
     justify-content: space-between;
     background: rgb(19, 18, 18);
-    width: 100%;
+    width: vw;
     height: 75px;
     position: sticky;
     top: 0;
@@ -23,7 +23,7 @@ body {
 footer{
     display: grid;
     background: rgb(19, 18, 18);
-    width: 100%;
+    width: vw;
     height: 20rem;
     align-items: center;
     justify-content: center;
@@ -173,14 +173,18 @@ footer #name-gow{
 
 #gelo {
     margin: 1rem 1rem;
-    width: 600px;
+    width: 40%;
+    height: 15%;
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 
 .posts{
     animation: slideInLeft 5s;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "post1 post2 post3"
+    "post4 post5";                    
     justify-content: space-between;
     margin-top: 1rem;
     padding: 0 3rem;  
@@ -231,3 +235,16 @@ footer #name-gow{
        
 }
 
+@media screen and (max-width: 1120px) {
+    .posts{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:  
+        "post1 post2"
+        "post3 post4"
+        "post5";
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    
+}

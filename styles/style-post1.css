@@ -1,6 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&display=swap');
 
+@keyframes fadeIn{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes slideInLeft {
+    0% {transform: translateX(-100%)}
+    100%{transform: translateX(0)}
+}
+
+@keyframes slideInDown {
+    0% {transform: translateY(100%)}
+    100%{transform: translateY(0)}
+}
+
 header{
     display: flex;
     justify-content: space-between;
@@ -16,7 +31,6 @@ header{
 body {
     margin: 0;
     background: rgb(218, 216, 213); 
-    width: vw; 
 }
 
 footer{
@@ -24,7 +38,7 @@ footer{
     flex-direction: column;
     background: rgb(19, 18, 18);
     width: 100%;
-    height: 15rem;
+    height: 20rem;
     align-items: center;
     justify-content: center;
     z-index: 1;
@@ -71,24 +85,17 @@ footer #name-gow{
     display: flex;
     align-items: start;
     justify-content: end;
+    animation: fadeIn 2s;
 }
 
 .bg{
     position: absolute;
-    opacity: 12%;
+    opacity: 15%;
     width: 50%;
     z-index: -1;
 }
 
-@keyframes fadeIn{
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-}
 
-@keyframes slideInLeft {
-    0% {transform: translateX(-100%)}
-    100%{transform: translateX(0)}
-}
 
 .logo{
     top: 0;
@@ -113,6 +120,10 @@ footer #name-gow{
     height: 3.5rem;
     margin: 1rem;
     padding-top: 0.4rem;
+}
+
+#burguer{
+    display: none;
 }
 
 #navi{
@@ -185,12 +196,13 @@ footer #name-gow{
 }
 
 .posts{
+    
     animation: slideInLeft 5s;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);                      
+    grid-row-gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);                      
     justify-content: space-between;
-    margin: 1rem 0;
-    padding: 0 3rem;      
+    padding: 2rem 3rem;      
 }
 
 .post-link{
@@ -212,9 +224,9 @@ footer #name-gow{
 
 .posts div{
     align-items: center;
-    border-left: 1.5px solid rgb(19, 18, 18); 
-    transition: transform .2s;
+    border-left: 2px solid transparent; 
     margin: 1rem 0;
+    transition: transform .2s;
 }
 
 .posts div:hover{
@@ -232,8 +244,7 @@ footer #name-gow{
 
 
 .posts img{
-    margin: 1rem 1rem;
-    margin-top: 0;
+    margin-bottom: 1rem;
     width: 65%;
     box-shadow: 0px 15px 12px 0px rgba(0,0,0,0.6);
 }
@@ -243,6 +254,60 @@ footer #name-gow{
     height: 1px;
     width: 95%;
        
+}
+
+.post-content{
+    animation: slideInDown 3s;
+    margin: 0 2rem;
+}
+
+.author{
+    display: flex;
+    margin: 2rem 1rem;
+}
+
+#mimir{
+    height: 3rem;
+}
+
+.info-author{
+    display: flex;
+    flex-direction: column;
+    margin: 0 1rem;   
+}
+
+.info-author p{
+    margin: 0.25rem 0;
+}
+
+.name-author{
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#date{
+    padding: 0;
+}
+
+.post-text{
+    width: 100%;
+}
+
+.list-itens{
+    list-style: georgian;
+}
+
+ul li{
+    margin: 0 1.5rem;
+}
+
+ul li p.text{
+    padding: 0 1rem;
+}
+
+#thanks{
+    font-size: medium;
 }
 
 @media screen and (max-width: 768px) {
@@ -264,6 +329,12 @@ footer #name-gow{
 
     footer #gow{
         padding-left: 0;
+    }
+
+    #burguer{
+        display: block;
+        height: 2rem;
+        margin-right: 0.5rem;
     }
 
     #navi{
@@ -338,16 +409,9 @@ footer #name-gow{
         animation: slideInLeft 2s
     }
 
-    #post1{
-
-    }
-
     .posts p {
         margin: 0 1%;
         width: 65%;
     }
-}
 
-@media screen and (min-width: 1200px) {
-    
 }

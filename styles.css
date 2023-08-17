@@ -5,8 +5,8 @@ header{
     display: flex;
     justify-content: space-between;
     background: rgb(19, 18, 18);
-    width: vw;
-    height: 75px;
+    width: 100%;
+    height: 5%;
     position: sticky;
     top: 0;
     align-items: center;
@@ -15,39 +15,37 @@ header{
 
 body {
     margin: 0;
-    background: rgb(212, 210, 206);  
-    background-image:image('bg');
-    background-position-x: center;
+    background: rgb(218, 216, 213); 
+    width: vw; 
 }
 
 footer{
-    display: grid;
+    display: flex;
+    flex-direction: column;
     background: rgb(19, 18, 18);
-    width: vw;
-    height: 20rem;
+    width: 100%;
+    height: 15rem;
     align-items: center;
     justify-content: center;
     z-index: 1;
-}
-
-footer #gow{
-    padding-left: 1rem;
 }
 
 footer p{
     color: whitesmoke;
     margin: 0 1.5rem;
     padding: 0 2rem;
-    width: 20rem;
+    width: 15rem;
     text-align: center;
     justify-content: center;
 }
 
 footer #name-gow{
     margin-left: 0;
+    padding-right: 1rem;
 }
 
 .contact{
+    margin: 0.5rem ;
     display: flex;
     text-align: center;
     justify-content: center;
@@ -93,6 +91,7 @@ footer #name-gow{
 }
 
 .logo{
+    top: 0;
     display: flex;
     transition: trasnform .2s; 
     
@@ -104,7 +103,6 @@ footer #name-gow{
 
 #gow{
     height: 4rem;
-    top: 0;
     margin: 1rem;
     margin-left: 2rem;
     margin-right: 0;
@@ -126,6 +124,7 @@ footer #name-gow{
     display: flex;
     margin-inline: 0;
     justify-content: end;
+    padding-left: 0;
 }
 
 #navi ul li{
@@ -138,6 +137,11 @@ footer #name-gow{
     transition: transform .2s;
     font-family: 'Raleway', sans-serif;
     border-bottom: 1px solid rgb(19, 18, 18);
+}
+
+.nav-link{
+    color: whitesmoke;
+    text-decoration: none;
 }
 
 #navi ul li:hover{
@@ -155,18 +159,20 @@ footer #name-gow{
 }
 
 #inicio img {
-    margin: 0 3rem;  
+    margin: 0 3%; 
+    align-self: center; 
 }
 
 .titulo{
     font-family: 'Raleway', sans-serif;
     padding: 0 3rem;
     margin: 2rem 0;
+    
 }
 
 .text {
     font-family: 'Cormorant Garamond', serif;
-    font-size: large;
+    font-size: 100%;
     padding-top: 2rem;
     padding: 0 3rem;
 }
@@ -181,14 +187,20 @@ footer #name-gow{
 .posts{
     animation: slideInLeft 5s;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: 
-    "post1 post2 post3"
-    "post4 post5";                    
+    grid-template-columns: repeat(3, 1fr);                      
     justify-content: space-between;
-    margin-top: 1rem;
-    padding: 0 3rem;  
-       
+    margin: 1rem 0;
+    padding: 0 3rem;      
+}
+
+.post-link{
+    text-decoration: none;
+    color: black
+}
+
+.post-box{
+    display: flex;
+    flex-direction: column;
 }
 
 .posts p {
@@ -199,11 +211,10 @@ footer #name-gow{
 }
 
 .posts div{
-   justify-content: center;
-   border-left: 1.5px solid rgb(19, 18, 18); 
-   transition: transform .2s;
-   padding: 0 1rem;
-   margin: 1rem 0;
+    align-items: center;
+    border-left: 1.5px solid rgb(19, 18, 18); 
+    transition: transform .2s;
+    margin: 1rem 0;
 }
 
 .posts div:hover{
@@ -223,7 +234,7 @@ footer #name-gow{
 .posts img{
     margin: 1rem 1rem;
     margin-top: 0;
-    width: 300px;
+    width: 65%;
     box-shadow: 0px 15px 12px 0px rgba(0,0,0,0.6);
 }
 
@@ -231,17 +242,109 @@ footer #name-gow{
     margin-top: 1rem;
     height: 1px;
     width: 95%;
-    opacity: 65%;
        
 }
 
-@media screen and (max-width: 1120px) {
+@media screen and (max-width: 768px) {
+    header{
+        height: 3rem;
+    }
+
+    footer{
+        height: 10rem;
+    }
+
+    footer p{
+        width: 12rem;
+    }
+
+    footer .logo{
+        height: 2rem;
+    }
+
+    footer #gow{
+        padding-left: 0;
+    }
+
+    #navi{
+        display: none;
+    }
+
+    .contact img {
+        background-color:white;
+        width: 1.5rem;
+        margin: 0 1%;
+        border-left: 0.5rem solid white;
+        border-right: 0.5rem solid white;
+        border-radius: 10%;
+    }
+    .logo{
+        align-items: center;
+        justify-content: center;
+    }
+
+    #gow{
+        height: 2.5rem;
+        margin-left: 0.7rem;
+    }
+
+    #name-gow{
+        height: 2rem;
+        margin: 0.5rem;
+    }
+
+
+    #inicio{
+        flex-direction: column;
+    }
+
+    #inicio{
+        align-items:  center;
+    }
+
+    #first{
+        width: 90%;
+        align-items: start;
+    }
+
+    .titulo{
+        font-size: large;
+        margin: 10px 0;
+        padding:0 1rem;
+    }
+
+    .text{
+        font-size: small;
+        padding: 0 1rem;
+    }
+
+    #gelo{
+        width: 70%;
+        margin: 1rem;
+    }
+
+    .bg{
+        width: 100%;
+    }
+
+    .rune{
+        align-items: center;
+    }
+
     .posts{
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas:  
-        "post1 post2"
-        "post3 post4"
-        "post5";
+        grid-template-columns: repeat(1, 1fr);
+        margin-left: 1rem;
+        padding: 0;
+        animation: slideInLeft 2s
+    }
+
+    #post1{
+
+    }
+
+    .posts p {
+        margin: 0 1%;
+        width: 65%;
     }
 }
 

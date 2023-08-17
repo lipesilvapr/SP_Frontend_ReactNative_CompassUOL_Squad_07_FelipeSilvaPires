@@ -290,6 +290,22 @@ footer #name-gow{
     padding: 0;
 }
 
+.social-media{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-media img{
+    margin: 5%;
+    transition: transform .2s;
+}
+
+.social-media img:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
 .post-text{
     width: 100%;
 }
@@ -309,6 +325,7 @@ ul li p.text{
 #thanks{
     font-size: medium;
 }
+
 
 @media screen and (max-width: 768px) {
     header{

@@ -268,12 +268,16 @@ footer #name-gow{
 
 #mimir{
     height: 3rem;
+    align-self: center;
+    justify-self: center;
 }
 
 .info-author{
     display: flex;
     flex-direction: column;
-    margin: 0 1rem;   
+    margin: 0 1rem; 
+    align-items: center; 
+    justify-content: center; 
 }
 
 .info-author p{
@@ -288,6 +292,22 @@ footer #name-gow{
 
 #date{
     padding: 0;
+}
+
+.social-media{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-media img{
+    margin: 5%;
+    transition: transform .2s;
+}
+
+.social-media img:hover{
+    cursor: pointer;
+    transform: scale(1.2);
 }
 
 .post-text{

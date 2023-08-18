@@ -90,8 +90,8 @@ footer #name-gow{
 
 .bg{
     position: absolute;
-    opacity: 12%;
-    width: 60%;
+    opacity: 15%;
+    width: 45%;
     z-index: -1;
 }
 
@@ -268,12 +268,16 @@ footer #name-gow{
 
 #mimir{
     height: 3rem;
+    align-self: center;
+    justify-self: center;
 }
 
 .info-author{
     display: flex;
     flex-direction: column;
-    margin: 0 1rem;   
+    margin: 0 1rem; 
+    align-items: center; 
+    justify-content: center; 
 }
 
 .info-author p{
@@ -303,7 +307,7 @@ footer #name-gow{
 
 .social-media img:hover{
     cursor: pointer;
-    transform: scale(1.2);
+    transform: scale(1.15);
 }
 
 .post-text{
@@ -358,8 +362,8 @@ ul li p.text{
     animation: slideInLeft 4s;
     width: 50%;
     border: 1px solid rgb(218, 216, 213);
-    margin: 2rem 25%;
-    padding: 1% 2%;
+    margin: 2rem 20%;
+    padding: 1rem 2rem;
     border-radius: 5px;
     box-shadow: 0px 0px 10px 1px rgb(19, 18, 18);
 }
@@ -376,14 +380,14 @@ ul li p.text{
 }
 
 .comment-title img{
-    margin: 0 1%;
+    margin: 0 1rem;
     height: 2rem;
 }
 
 .comment-form input, .comment-form textarea{
     width: 100%;
     padding: 1%;
-    margin: 1% 0;
+    margin: 5px 0;
     box-sizing: border-box;
     outline: none;
     font-family: 'Cormorant Garamond', serif;
@@ -408,9 +412,6 @@ button:hover{
     color: whitesmoke;
     background-color: rgb(19, 18, 18);
 }
-
-
-
 
 @media screen and (max-width: 768px) {
     header{

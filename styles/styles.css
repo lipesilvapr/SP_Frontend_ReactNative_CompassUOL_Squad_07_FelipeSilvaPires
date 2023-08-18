@@ -69,7 +69,7 @@ footer #name-gow{
 .contact img {
     background-color:white;
     width: 3rem;
-    margin: 0 1%;
+    margin: 0 0.3rem;
     border-left: 1rem solid white;
     border-right: 1rem solid white;
     border-radius: 10%;
@@ -120,12 +120,15 @@ footer #name-gow{
     padding-top: 0.4rem;
 }
 
-#burguer{
+.toggle-burger{
+    position: absolute;
+    top: 1rem;
+    right: 0.5rem;
     display: none;
 }
 
 #navi{
-    inset-inline-start: 0;
+    inset-inline-start: 0
 }
 
 #navi ul{
@@ -138,8 +141,8 @@ footer #name-gow{
 
 #navi ul li{
     margin-inline: .25rem;
+    background-color: rgb(19, 18, 18);
     margin-block: 0;
-    line-height: 1.5rem;
     list-style: none;
     padding: 5px;
     margin: 0 1rem;
@@ -255,7 +258,8 @@ footer #name-gow{
 
 @media screen and (max-width: 768px) {
     header{
-        height: 3rem;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     footer{
@@ -274,14 +278,37 @@ footer #name-gow{
         padding-left: 0;
     }
 
-    #burguer{
+    .toggle-burger{
         display: block;
         height: 2rem;
         margin-right: 0.5rem;
     }
 
+    .toggle-burger img{
+        height: 2rem;
+    }
+
     #navi{
+        width: 100%;
         display: none;
+    }
+
+    #navi.active{
+        display: flex;
+    }
+
+    #navi ul{
+        flex-direction: column;
+    }
+
+    #navi ul li{
+        text-align: center;
+    }
+
+    #navi ul li:hover{
+        cursor: pointer;
+        transform: none;
+        border-bottom: 1px solid whitesmoke;   
     }
 
     .contact img {

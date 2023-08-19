@@ -120,23 +120,38 @@ footer #name-gow{
     padding-top: 0.4rem;
 }
 
-.toggle-burger{
+.burger{
     position: absolute;
-    top: 1rem;
+    top: 1.3rem;
     right: 0.5rem;
     display: none;
 }
 
 #navi{
-    inset-inline-start: 0
+    inset-inline-start: 0;
 }
 
-#navi ul{
+.nav-menu{
     color: whitesmoke;
     display: flex;
     margin-inline: 0;
     justify-content: end;
     padding-left: 0;
+}
+
+.burger{
+    display: none;
+    cursor: pointer;
+}
+
+.bar{
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 2px;
+    margin: 5px auto;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
 }
 
 #navi ul li{
@@ -278,27 +293,37 @@ footer #name-gow{
         padding-left: 0;
     }
 
-    .toggle-burger{
+    .burger{
         display: block;
-        height: 2rem;
-        margin-right: 0.5rem;
-    }
-
-    .toggle-burger img{
-        height: 2rem;
     }
 
     #navi{
         width: 100%;
+
+    }
+
+    .burger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .burger.active .bar:nth-child(1){
+     transform: translateY(8px) rotate(45deg);
+     }
+
+    .burger.active .bar:nth-child(3){
+         transform: translateY(-8px) rotate(-45deg);
+     }
+
+    .nav-menu{
         display: none;
-    }
-
-    #navi.active{
-        display: flex;
-    }
-
-    #navi ul{
+        border-radius: 0 0 20px 20px;
+        text-align: center;
         flex-direction: column;
+        width: 100%;
+     }
+
+     .nav-menu.active{
+        display: flex;
     }
 
     #navi ul li{

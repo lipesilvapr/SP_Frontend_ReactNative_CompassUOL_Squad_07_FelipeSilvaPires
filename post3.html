@@ -8,20 +8,25 @@
 </head>
 <body>
     <div id="up"></div>
-        <header id="topo">
-            <div class="logo">
-                <a href="#up"><img src="images/logogow.png" id="gow" ></a>
-                <a href="#up"><img src="images/GOW.png" id="name-gow"></a>
-            </div>
+    <header id="topo">
+        <div class="logo">
+            <a href="#up"><img src="images/logogow.png" id="gow" ></a>
+            <a href="#up"><img src="images/GOW.png" id="name-gow"></a>
+             
+        </div>
             <nav id="navi">
-                <ul>
+                <ul class="nav-menu">
                     <li id="blog" class="titulo"><a  class="nav-link" href="index.html">Blog</a></li>
                     <li id="about" class="titulo">About</li>
                     <li id="links" class="titulo">Links</li>
                     <li id="projects" class="titulo">Projects</li>
                 </ul>
+                <div class="burger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
             </nav>
-            <img src="images/burger-bar.svg" id="burguer">
         </header>
     </div>
 
@@ -89,6 +94,34 @@
 
     <hr class="linha" color="black">
 
+    <div class="some-comments">
+        <h1 class="titulo">Comments</h1>
+        <div class="author">
+            <img src="images/Atreus.png" id="person">
+            <div class="info-author">
+                <p class="name-author">Atreus, Champion of the Jötnar.</p>
+                <p class="text">Apr 19,2020 - 7 min read</p>
+            </div>
+            <p class="text" id="comment">"Lorem ipsum dolor sit amet, consectetur adipisicing elit."</p>
+        </div>
+        <div class="author">
+            <img src="images/Freya.png" id="person">
+            <div class="info-author">
+                <p class="name-author">Freya, A former leader of the Vanir.</p>
+                <p class="text">Apr 20,2020 - 5 min read</p>
+            </div>
+            <p class="text" id="comment">"Lorem ipsum dolor sit amet, consectetur adipisicing elit."</p>
+        </div>
+        <div class="author">
+            <img src="images/Tyr.png" id="person">
+            <div class="info-author">
+                <p class="name-author">Tyr, the norse god of war.</p>
+                <p class="text">Apr 22,2020 - 4 min read</p>
+            </div>
+            <p class="text" id="comment">"Lorem ipsum dolor sit amet, consectetur adipisicing elit."</p>
+        </div>
+    </div>
+
     <div class="comment-area">
         <div class="comment-title">
             <h1 class="titulo">Comment here!</h1>
@@ -154,6 +187,6 @@
         </div>
     </footer>
 
-
+    <script src="dist/app.js"></script>
 </body>
 </html>

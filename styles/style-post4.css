@@ -122,7 +122,10 @@ footer #name-gow{
     padding-top: 0.4rem;
 }
 
-#burguer{
+.burger{
+    position: absolute;
+    top: 1.3rem;
+    right: 0.5rem;
     display: none;
 }
 
@@ -130,7 +133,7 @@ footer #name-gow{
     inset-inline-start: 0;
 }
 
-#navi ul{
+.nav-menu{
     color: whitesmoke;
     display: flex;
     margin-inline: 0;
@@ -138,10 +141,25 @@ footer #name-gow{
     padding-left: 0;
 }
 
+.burger{
+    display: none;
+    cursor: pointer;
+}
+
+.bar{
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 2px;
+    margin: 5px auto;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
 #navi ul li{
     margin-inline: .25rem;
+    background-color: rgb(19, 18, 18);
     margin-block: 0;
-    line-height: 1.5rem;
     list-style: none;
     padding: 5px;
     margin: 0 1rem;
@@ -357,6 +375,22 @@ ul li p.text{
     align-self: center;
 }
 
+.some-comments .author{
+    padding: 1%;
+    border: 1px solid rgb(175, 171, 166);
+}
+
+#person{
+    height: 3rem;
+    align-self: center;
+    justify-self: center;
+}
+
+#comment{
+    margin-left: 2rem;
+    font-style: italic;
+}
+
 .comment-area{
     background-color: rgb(218, 216, 213);
     animation: slideInLeft 4s;
@@ -415,7 +449,8 @@ button:hover{
 
 @media screen and (max-width: 768px) {
     header{
-        height: 3rem;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     footer{
@@ -434,14 +469,47 @@ button:hover{
         padding-left: 0;
     }
 
-    #burguer{
+    .burger{
         display: block;
-        height: 2rem;
-        margin-right: 0.5rem;
     }
 
     #navi{
+        width: 100%;
+
+    }
+
+    .burger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .burger.active .bar:nth-child(1){
+     transform: translateY(8px) rotate(45deg);
+     }
+
+    .burger.active .bar:nth-child(3){
+         transform: translateY(-8px) rotate(-45deg);
+     }
+
+    .nav-menu{
         display: none;
+        border-radius: 0 0 20px 20px;
+        text-align: center;
+        flex-direction: column;
+        width: 100%;
+     }
+
+    .nav-menu.active{
+        display: flex;
+    }
+
+    #navi ul li{
+        text-align: center;
+    }
+
+    #navi ul li:hover{
+        cursor: pointer;
+        transform: none;
+        border-bottom: 1px solid whitesmoke;   
     }
 
     .contact img {

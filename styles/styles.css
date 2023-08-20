@@ -58,43 +58,6 @@ footer #name-gow{
     padding-right: 1rem;
 }
 
-.contact{
-    margin: 0.5rem ;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-}
-
-
-.contact img {
-    background-color:white;
-    width: 3rem;
-    margin: 0 0.3rem;
-    border-left: 1rem solid white;
-    border-right: 1rem solid white;
-    border-radius: 10%;
-    transition: transform .2s;
-}
-
-.contact img:hover{
-    cursor: pointer;
-    transform: scale(1.15);
-}
-
-.rune{
-    display: flex;
-    align-items: start;
-    justify-content: end;
-    animation: fadeIn 3s;
-}
-
-.bg{
-    position: absolute;
-    opacity: 12%;
-    width: 50%;
-    z-index: -1;
-}
-
 .logo{
     top: 0;
     display: flex;
@@ -211,6 +174,20 @@ footer #name-gow{
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 
+.rune{
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    animation: fadeIn 3s;
+}
+
+.bg{
+    position: absolute;
+    opacity: 12%;
+    width: 50%;
+    z-index: -1;
+}
+
 .posts{
     
     animation: slideInLeft 5s;
@@ -270,6 +247,30 @@ footer #name-gow{
     width: 95%;
        
 }
+
+.contact{
+    margin: 0.5rem ;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+
+.contact img {
+    background-color:white;
+    width: 3rem;
+    margin: 0 0.3rem;
+    border-left: 1rem solid white;
+    border-right: 1rem solid white;
+    border-radius: 10%;
+    transition: transform .2s;
+}
+
+.contact img:hover{
+    cursor: pointer;
+    transform: scale(1.15);
+}
+
 
 @media screen and (max-width: 768px) {
     header{
@@ -410,6 +411,3 @@ footer #name-gow{
     }
 }
 
-@media screen and (min-width: 1200px) {
-    
-}

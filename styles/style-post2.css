@@ -65,7 +65,7 @@ footer #name-gow{
     
 }
 
-#topo.logo:hover{
+#top.logo:hover{
     cursor: pointer;
 }
 
@@ -140,7 +140,7 @@ footer #name-gow{
     border-bottom: 1px solid whitesmoke;   
 }
 
-#inicio{
+#start{
     animation: fadeIn 5s;
     display: flex;
     margin-top: 1rem;
@@ -148,12 +148,12 @@ footer #name-gow{
     z-index: 1;   
 }
 
-#inicio img {
+#start img {
     margin: 0 3%; 
     align-self: center; 
 }
 
-.titulo{
+.title{
     font-family: 'Raleway', sans-serif;
     padding: 0 3rem;
     margin: 2rem 0;
@@ -167,7 +167,7 @@ footer #name-gow{
     padding: 0 3rem;
 }
 
-#gelo {
+#ice {
     margin: 1rem 1rem;
     width: 40%;
     height: 15%;
@@ -411,7 +411,7 @@ button:hover{
     box-shadow: 0px 15px 12px 0px rgba(0,0,0,0.6);
 }
 
-.linha{
+.line{
     margin-top: 1rem;
     height: 1px;
     width: 95%;
@@ -530,11 +530,11 @@ button:hover{
     }
 
 
-    #inicio{
+    #start{
         flex-direction: column;
     }
 
-    #inicio{
+    #start{
         align-items:  center;
     }
 
@@ -543,7 +543,7 @@ button:hover{
         align-items: start;
     }
 
-    .titulo{
+    .title{
         font-size: large;
         margin: 10px 0;
         padding:0 1rem;
@@ -554,7 +554,7 @@ button:hover{
         padding: 0 1rem;
     }
 
-    #gelo{
+    #ice{
         width: 70%;
         margin: 1rem;
     }
